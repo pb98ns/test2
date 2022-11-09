@@ -37,19 +37,18 @@
             <div class="container" >
             
             
-                <a class="navbar-brand" href="{{ url('/home') }}" >
+                <a class="navbar-brand " href="{{ url('/home') }}" >
               
-                    <img text-align="center" src="/clock-10-512.png" alt="" width="23" height="23" alt="" >  
+                    <img text-align="center" src="clock-10-512.png" alt="" width="23" height="23" alt="" >  
                 
                    
                 </a>
               
                 
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+                <button class="navbar-toggler ml-auto" style="margin: auto;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" display= "table"></span>
+  </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
