@@ -37,7 +37,7 @@
             <div class="container" >
             
             
-                <a class="navbar-brand " href="{{ url('/home') }}" >
+                <a class="navbar-brand ml-auto" href="{{ url('/home') }}" >
               
                     <img text-align="center" src="clock-10-512.png" alt="" width="23" height="23" alt="" >  
                 
