@@ -58,7 +58,7 @@
                     <!-- Center Side Of Navbar -->
                    
                 <ul class="nav justify-content-end">
-                <ul class="navbar-nav ml-auto ">
+                <ul class="navbar-nav mx-auto ">
                         <!-- Authentication Links -->
                         @guest
                    
