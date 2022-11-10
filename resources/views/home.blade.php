@@ -192,7 +192,7 @@ Czas pracy:
   <tbody>
   @foreach($showuserproject as $projects) 
     <tr>
-<td class="table-row" >{{$projects->firm->name}}</td> 
+<td class="table-row" >{{ $loop->iteration }}. {{$projects->firm->name}}</td> 
 <td class="table-row" >{{$projects->task->name}}</td>  
 <td class="table-row" >{{$projects['description']}}</td>   
 <td class="table-row" >{{ \Carbon\Carbon::parse($projects->time)->format('H:i') }}</td>  
@@ -207,7 +207,7 @@ Czas pracy:
     $('#myTable').DataTable({
       "language": {
       infoEmpty:"",
-      info: "_TOTAL_ - liczba zapisanych rekordów w dniu {{$today}} ",
+      info: "Raport czasu pracy z dnia {{$today}} ",
       emptyTable: "Brak zdefiniowanych raportów w dniu {{$today}}",
       search: "Szukaj:" ,
     
