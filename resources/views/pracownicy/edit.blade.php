@@ -45,7 +45,7 @@
 <input type="radio" name="permissions" value="Pracownik"> Użytkownik <br/>
 @endif
 
-@if($user->permissions == 'Pracownik')
+@if($user->permissions == 'Użytkownik')
 <input type="radio" name="permissions" value="Administrator"> Administrator <br/>
 <input type="radio" name="permissions" value="Pracownik" checked> Użytkownik <br/>
 @endif
