@@ -28,7 +28,7 @@ $today = date('Y-m-d');
 <div class="container">
     <div class="row justify-content-center">
     <center>
- <h3>    <div class="card-header"> {{ Auth::user()->name }}  {{ Auth::user()->surname }} </h3> 
+ <h3>    <div class="card-header"> {{ Auth::user()->name }}  {{ Auth::user()->surname }}
  
 <h3> {{$today}} ({{ \Carbon\Carbon::parse($today)->translatedFormat('l') }}) </h3> @if(!empty($showsum))
 @foreach($showsum as $projects) 
