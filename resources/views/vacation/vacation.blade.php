@@ -222,7 +222,7 @@ $today = date('Y-m-d');
                  <div class="form-group col-md-6"  style="margin-top: 30px;">
     <div class="row justify-content-center">
     <div class="form-row">                          
-<table class="table">
+<table class="table" id="vacchTable">
   <thead>
     <tr>
       
