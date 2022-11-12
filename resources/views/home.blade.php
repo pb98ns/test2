@@ -9,7 +9,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.pl.min.js"></script>
-  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+  
+  
+  	<script type="text/javascript" src="documentation-assets/jquery.timepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="documentation-assets/jquery.timepicker.css" />
+	<script type="text/javascript" src="documentation-assets/bootstrap-datepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="documentation-assets/bootstrap-datepicker.css" />
 @endsection
 
 
@@ -134,7 +140,7 @@ Czas pracy:
 
 <div class="form-group col-md-6">
 <label for="time"><b>Czas:</b></label>
-<input id="time" type="text" class="timepicker form-control @error('time') is-invalid @enderror" name="time" value="{{ old('time') }}" required autocomplete="time" autofocus>
+<input id="timeformatExample1" type="text" class="time form-control @error('time') is-invalid @enderror" name="time" value="{{ old('time') }}" required autocomplete="time" autofocus>
 
 @error('name')
     <span class="invalid-feedback" role="alert">
@@ -274,6 +280,10 @@ $(document).ready(function($) {
     }); 
 
 </script>
-
+<script>
+			$(function() {
+				$('#timeformatExample1').timepicker({ 'timeFormat': 'H:i', 'step':'5'});
+			});
+			</script>
 
 @endsection
