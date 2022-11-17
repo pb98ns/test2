@@ -101,10 +101,10 @@ $today = date('Y-m-d');
 @if($projects->type_vacation === "CH")
     <tr>
 
-    <td class="table-danger table-row">{{$projects->user->surname}} {{$projects->user->name}}</td>  
+    <td class="table-danger">{{$projects->user->surname}} {{$projects->user->name}}</td>  
 
 
-<td class="table-danger table-row">CH</td>  
+<td class="table-danger">CH</td>  
 </tr>
 @endif
     @endforeach
