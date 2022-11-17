@@ -47,7 +47,7 @@ public function store(Request $request)
     $request->validate([
         'name' => ['required', 'string', 'max:255'],
         'place' => ['max:255'],
-        'nip' => ['max:12'],
+        'nip' => ['max:255'],
     ]);
     $firm = new Firm;
     $firm ->name=$request->input('name');
@@ -76,7 +76,7 @@ public function update(Request $request, $id)
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'place' => ['max:255'],
-            'nip' => ['max:12'],
+            'nip' => ['max:255'],
         
     ]);
         
