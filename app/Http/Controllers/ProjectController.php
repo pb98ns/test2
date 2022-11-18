@@ -225,6 +225,7 @@ class ProjectController extends Controller
                 $allfirm=Project::join('firms','projects.firm_id','=','firms.id')
                 ->select("firms.*", "projects.*", DB::raw("sec_to_time (sum(time_to_sec(`time`))) as czas2"))
                 ->where("projects.date", "=", $today)
+                ->orderBy('firms.name', "asc")
                 ->groupBy('firm_id')
                 ->get();
 
@@ -269,6 +270,7 @@ class ProjectController extends Controller
                 ->select("users.*", "projects.*", DB::raw("sec_to_time (sum(time_to_sec(`time`))) as czas"))
                 ->where("projects.date", "=", $start_date)
                 ->groupBy('user_id')
+                ->orderBy('users.surname', "asc")
                 ->get();
 
                 
@@ -295,6 +297,7 @@ class ProjectController extends Controller
                 ->select("firms.*", "projects.*", DB::raw("sec_to_time (sum(time_to_sec(`time`))) as czas2"))
                 ->where("projects.date", "=", $start_date)
                 ->groupBy('firm_id')
+                ->orderBy('firms.name', "asc")
                 ->get();
 
                 $user = $userRepo->getAllUsers();
@@ -395,6 +398,7 @@ class ProjectController extends Controller
                 return $all->where('date', '<=', $today3);
             })
                 ->groupBy('user_id')
+                ->orderBy('users.surname', "asc")
                 ->get();
 
                 $user1=Project::join('users','projects.user_id','=','users.id')
@@ -407,6 +411,7 @@ class ProjectController extends Controller
                 return $user1->where('date', '<=', $today3);
             })
                 ->groupBy("user_id")
+                ->orderBy('users.surname', "asc")
                 ->get();
 
                 $all2=Project::join('users','projects.user_id','=','users.id')
@@ -449,6 +454,7 @@ class ProjectController extends Controller
                 return $allfirm->where('date', '<=', $today3);
             })
                 ->groupBy('firm_id')
+                ->orderBy('firms.name', "asc")
                 ->get();
 
                 $suma=DB::table("projects")
@@ -510,6 +516,7 @@ class ProjectController extends Controller
                         return $all->where('date', '<=', $end_date);
                     })
                         ->groupBy('user_id')
+                        ->orderBy('users.surname', "asc")
                         ->get();
         
                         
@@ -548,6 +555,7 @@ class ProjectController extends Controller
                         return $allfirm->where('date', '<=', $end_date);
                     })
                         ->groupBy('firm_id')
+                        ->orderBy('firms.name', "asc")
                         ->get();
         
                         $user = $userRepo->getAllUsers();
